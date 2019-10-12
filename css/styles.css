@@ -1,0 +1,102 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat&display=swap");
+* {
+  margin: 0;
+  font-family: "Montserrat", sans-serif;
+  color: #fff;
+}
+
+body {
+  background-image: linear-gradient(#2999C2, #983FC2);
+  min-height: 100vh;
+}
+
+header {
+  height: 100px;
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+}
+header .logo img {
+  display: block;
+  width: 120px;
+}
+
+.error {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: calc(100vh - 100px - 60px);
+  padding: 0 20px;
+}
+.error h1 {
+  font-size: 60px;
+  transform: scale(1.1);
+  margin-bottom: 30px;
+}
+.error p {
+  font-size: 20px;
+}
+
+.buscador {
+  background: red;
+}
+
+footer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: center;
+  height: 60px;
+  padding: 0 20px;
+}
+footer a {
+  margin: 0 10px;
+  color: #fff;
+  text-decoration: none;
+}
+footer a:hover {
+  text-decoration: underline;
+}
+
+.animated {
+  animation-duration: 2.5s;
+  animation-fill-mode: both;
+  animation-iteration-count: infinite;
+}
+
+@keyframes flip {
+  0% {
+    transform: perspective(400px) translateZ(0) rotateY(0) scale(1);
+    animation-timing-function: ease-out;
+  }
+  40% {
+    transform: perspective(400px) translateZ(150px) rotateY(170deg) scale(1);
+    animation-timing-function: ease-out;
+  }
+  50% {
+    transform: perspective(400px) translateZ(150px) rotateY(190deg) scale(1);
+    animation-timing-function: ease-in;
+  }
+  80% {
+    transform: perspective(400px) translateZ(0) rotateY(360deg) scale(0.95);
+    animation-timing-function: ease-in;
+  }
+  100% {
+    transform: perspective(400px) translateZ(0) rotateY(360deg) scale(1);
+    animation-timing-function: ease-in;
+  }
+}
+.animated.flip {
+  backface-visibility: visible;
+  animation-name: flip;
+}
+
+@media (max-width: 767px) {
+  footer {
+    height: auto;
+    justify-content: center;
+  }
+}
+
+/*# sourceMappingURL=styles.css.map */
