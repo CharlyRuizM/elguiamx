@@ -1,5 +1,5 @@
 body {
-    background-color: #2999C2;
+    background-color: #3CCAC6;
     font-family: 'Montserrat', sans-serif;
     margin: 0px;
 }
@@ -19,8 +19,40 @@ body {
     margin-top: 0;
     margin-left: 10px;
 }
+
+.main {
+  background-image: url("../images/ciudad\ background.png");
+  height: 600px;
+  background-size: cover;
+  background-position: center top;
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  align-items: center;
+}
+
+.main__title {
+  color: white;
+  font-size: 25px;
+  display: flex;
+  justify-content: center;
+}
+.main_title--input {
+  background-color: rgba(255, 255, 255, 0.1);
+  border: 2px solid white;
+  border-radius: 30px;
+  font-family: "Muli", sans-serif;
+  font-size: 16px;
+  height: 50px;
+  padding: 0px 20px;
+  width: 70%;
+  outline: none;
+  
+}
+
 .login {
-    background: linear-gradient(#2999C2, #983fc2);
+    background: linear-gradient(#3CCAC6, #3CCAC6);
+    border: 0;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -113,7 +145,7 @@ body {
     margin: 10px 0px;
   }
   .footer {
-    background-color: #983fc2;
+    background-color: #3CCAC6;
     display: flex;
     align-items: center;
     height: 100px;
