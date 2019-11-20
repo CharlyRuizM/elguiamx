@@ -161,36 +161,82 @@ body {
       align-items: flex-start;
       background: linear-gradient(to top, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0) 100%);
       bottom: 0;
-      display: flex;
+      display: grid;
+      grid-template: repeat(4, 1fr) /repeat(3, 1fr);
+      grid-template-areas: "category category category"
+                           "place place place"
+                           "city city city"
+                           "rate reviews reviews";
       font-size: 10px;
       flex-direction: column;
       justify-content: flex-end;
       left: 0;
-      opacity: 0;
+      opacity: 1;
       transition: 450ms opacity;
-      padding: 10px;
+      padding: 0px;
       position: absolute;
       right: 0;
       top: 0;
+      color: white;
     }
     
-    .carousel-item__details--img {
-      width: 20px;
+    .carousel-item__details--category{
+      grid-area: category;
+      color: white;
+      font-size: 8px;
+      padding-left: 15px;
+      align-self: center;
+
     }
     
+    .carousel-item__details--place {
+      grid-area: place;
+      font-size: 30px;
+      font-weight: bold;
+      margin: 0;
+      display: flex;
+      justify-content: start;
+      padding-left: 15px;
+      align-self: center;
+    }
+
+    .carousel-item__details--city{
+      grid-area: city;
+      padding-left: 15px;
+      align-self: center;
+
+    }
+
     .carousel-item:hover .carousel-item__details {
       opacity: 1;
     }
-    
-    .carousel-item__details--title {
+
+    .carousel-item__details--rate {
+      background: linear-gradient(to bottom, rgba(41,153,194,1) 0%, rgba(9,130,252,1) 100%);
+      ;
+      grid-area: rate;
       color: white;
-      margin: 5px 0px 0px 0px;
+      margin: 0;
+      height: 100%;
+      font-size: 41px;
+      font-weight: bold;
+      display: flex;
+      justify-content: center;
+      align-self: center;
+      
     }
     
-    .carousel-item__details--subtitle {
+    .carousel-item__details--reviews {
+      background: linear-gradient(to bottom, rgba(41,153,194,1) 0%, rgba(9,130,252,1) 100%);
+
+      grid-area: reviews;
       color: white;
+      height: 100%;
       font-size: 8px;
-      margin: 3px 0px;
+      margin: 0;
+      align-self: center;
+      display: flex;
+    align-items: center;
     }
     
     
