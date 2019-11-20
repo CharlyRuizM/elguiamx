@@ -1,0 +1,15 @@
+{
+  "name": "front",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "watch": "sass --watch /Users/davidgutierreztovar/ProjectsJs/elguiamx/front/css/styles.scss /Users/davidgutierreztovar/ProjectsJs/elguiamx/front/css/styles.css"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "sass": "^1.23.3"
+  }
+}

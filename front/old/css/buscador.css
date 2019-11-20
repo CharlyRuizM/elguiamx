@@ -1,0 +1,242 @@
+body {
+    background-color:white;
+    font-family: 'Montserrat', sans-serif;
+    margin: 0px;
+    width: 100%;
+}
+  .header {
+    background-color: #2999C2;
+    width: 100%;
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .header__img {
+    width: 200px;
+    margin-top: 0px;
+    margin-left: 10px;
+  }
+  
+  .header__menu {
+    margin-right: 30px;
+  }
+  
+  .header__menu ul {
+    display: none;
+    list-style: none;
+    padding: 0px;
+    position: absolute;
+    width: 100px;
+    text-align: right;
+    margin: 0px 0px 0px -14px;
+  }
+  
+  .header__menu:hover ul, ul:hover {
+    display: block;
+  }
+  
+  .header__menu li {
+    margin: 10px 0px;
+  }
+  
+  .header__menu li a {
+    color: white;
+    text-decoration: none;
+  }
+  
+  .header__menu li a:hover {
+    text-decoration: underline;
+  }
+  
+  .header__menu--profile {
+    margin-right: 8px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+  }
+  
+  .header__menu--profile img {
+    margin-right: 8px;
+    width: 40px;
+  }
+  
+  .header__menu--profile p {
+    margin: 0px;
+    color: white;
+  }
+
+  .main {
+    background-image: url("../images/backheader.png");
+    height: 202px;
+    background-size: cover;
+    background-position: center top;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+  }
+  
+  .main__title {
+    color: white;
+    font-size: 25px;
+    display: flex;
+    justify-content: center;
+  }
+  .main_title--input {
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 2px solid white;
+    border-radius: 30px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    height: 50px;
+    padding: 0px 20px;
+    width: 70%;
+    outline: none;
+  }
+
+    .places {
+      height: 450px;
+    }
+    
+    /* carousel */
+
+    .carousel {
+      overflow: scroll;
+      padding-left: 30px;
+      width: 100%;
+      /* height: 430px; */
+      position: relative;
+    }
+    
+    .carousel__container {
+      transition: 450ms -webkit-transform;
+      transition: 450ms transform;
+      transition: 450ms transform, 450ms -webkit-transform;
+      font-size: 0;
+      white-space: nowrap;
+      margin: 70px 0px 10px;
+      padding-bottom: 10px;
+    }
+    
+    .carousel__container:hover .carousel-item {
+      opacity: 0.3;
+    }
+    
+    .carousel__container:hover .carousel-item:hover {
+      -webkit-transform: scale(1.5);
+              transform: scale(1.5);
+      opacity: 1;
+    }
+    
+    .carousel-item {
+      border-radius: 20px;
+      overflow: hidden;
+      position: relative;
+      display: inline-block;
+      width: 300px;
+      height: 220px;
+      margin-right: 10px;
+      font-size: 20px;
+      cursor: pointer;
+      transition: 450ms all;
+      -webkit-transform-origin: center left;
+              transform-origin: center left;
+    }
+    
+    .carousel-item:hover ~ .carousel-item {
+      -webkit-transform: translate3d(100px, 0, 0);
+              transform: translate3d(100px, 0, 0);
+    }
+    
+    .carousel-item__img {
+      width: 300px;
+      height: 220px;
+      -o-object-fit: cover;
+         object-fit: cover;
+    }
+    
+    .carousel-item__details {
+      align-items: flex-start;
+      background: linear-gradient(to top, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0) 100%);
+      bottom: 0;
+      display: grid;
+      grid-template: repeat(4, 1fr) /repeat(3, 1fr);
+      grid-template-areas: "category category category"
+                           "place place place"
+                           "city city city"
+                           "rate reviews reviews";
+      font-size: 10px;
+      flex-direction: column;
+      justify-content: flex-end;
+      left: 0;
+      opacity: 1;
+      transition: 450ms opacity;
+      padding: 0px;
+      position: absolute;
+      right: 0;
+      top: 0;
+      color: white;
+    }
+    
+    .carousel-item__details--category{
+      grid-area: category;
+      color: white;
+      font-size: 8px;
+      padding-left: 15px;
+      align-self: center;
+
+    }
+    
+    .carousel-item__details--place {
+      grid-area: place;
+      font-size: 30px;
+      font-weight: bold;
+      margin: 0;
+      display: flex;
+      justify-content: start;
+      padding-left: 15px;
+      align-self: center;
+    }
+
+    .carousel-item__details--city{
+      grid-area: city;
+      padding-left: 15px;
+      align-self: center;
+
+    }
+
+    .carousel-item:hover .carousel-item__details {
+      opacity: 1;
+    }
+
+    .carousel-item__details--rate {
+      background: linear-gradient(to bottom, rgba(41,153,194,1) 0%, rgba(9,130,252,1) 100%);
+      ;
+      grid-area: rate;
+      color: white;
+      margin: 0;
+      height: 100%;
+      font-size: 41px;
+      font-weight: bold;
+      display: flex;
+      justify-content: center;
+      align-self: center;
+      
+    }
+    
+    .carousel-item__details--reviews {
+      background: linear-gradient(to bottom, rgba(41,153,194,1) 0%, rgba(9,130,252,1) 100%);
+
+      grid-area: reviews;
+      color: white;
+      height: 100%;
+      font-size: 8px;
+      margin: 0;
+      align-self: center;
+      display: flex;
+    align-items: center;
+    }
+    
+    
