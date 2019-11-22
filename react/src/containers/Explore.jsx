@@ -18,12 +18,14 @@ const Explore = ({ places }) => {
       <div className="recomendations">
         <ul className="recomendations-list">
 
-          <li className="recomendations-list__item">
-            <img className="photo" src={placeImg} alt="" />
-            <div className="name">Restaurant Catedral</div>
-            <div className="category">Restaurant</div>
-            <button>Guardar</button>
-          </li>
+          {places.map((item, index) =>
+            <li key={index} className="recomendations-list__item">
+              <img className="photo" src="https://fastly.4sqi.net/img/general/width400/44239650_1tC2C0Z1RvXoMT_F306bgkaiTxxKH1mluH3Tv_6uDGM.jpg" alt="" />
+              <div className="name">{item.name}</div>
+              <div className="category">{item.categories[0].name}</div>
+              <button>Guardar</button>
+            </li>
+          )}
           
         </ul>
       </div>

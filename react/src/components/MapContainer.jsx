@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Map, GoogleApiWrapper, Marker, InfoWindow } from 'google-maps-react';
+import { Map, InfoWindow, GoogleApiWrapper, Marker } from 'google-maps-react';
 
 export class MapContainer extends Component {
 
@@ -7,23 +7,50 @@ export class MapContainer extends Component {
       super(props);
       this.state = {
           show: true,
+          zoom: 12,
           activeMarker: {},
           selectedPlace: {},
           showInfoWindow: false,
+          initalCenter: { lat: 19.42672619, lng: -99.1718706 }
       }
   }
 
-  // onMarkerClick = (props, marker, e) => {
-  //   this.setState({
-  //     selectedPlace: props,
-  //     activeMarker: marker,
-  //     showInfoWindow: true
-  //   });
-  // }
+  onMouseoverMarker = (props, marker, e) => {
+    this.setState({
+      selectedPlace: props,
+      activeMarker: marker,
+      showInfoWindow: true
+    });
+  }
+  
+  onMarkerClick = (props, marker, e) => {
+    console.log(props.position);
+    this.setState({
+      selectedPlace: props,
+      activeMarker: marker,
+      showInfoWindow: true,
+      initalCenter: props.position,
+      zoom: 15,
+    });
+  }
+
+  centerMoved = (mapProps, map) => {
+  }
+
+  
+  onMapClicked = (props) => {
+    if (this.state.showInfoWindow) {
+      this.setState({
+        showInfoWindow: false,
+        activeMarker: null
+      })
+    }
+  };
+  
 
   render() {
     const { google, places } = this.props;
-    const { show, showInfoWindow, activeMarker, selectedPlace} = this.state;
+    const { show, zoom, initalCenter, showInfoWindow, activeMarker, selectedPlace} = this.state;
     const style = {
       width: '100%',
       height: '100%'
@@ -33,19 +60,27 @@ export class MapContainer extends Component {
       <Map 
         google={google} 
         style={style}
-        zoom={12}
+        zoom={zoom}
         visible={show}
-        initialCenter={{ lat: 19.42672619, lng: -99.1718706 }}
+        initialCenter={initalCenter}
+        onDragend={this.centerMoved}
+        onClick={this.onMapClicked}
       >
 
         {places.map((item, index) =>
           <Marker
             key={index}
             onClick={this.onMarkerClick}
-            title={item.venueName}
-            name={item.venueName}
-            venueName={item.venueName}
-            position={{lat: item.venueLat, lng: item.venueLon}} 
+            //onMouseover={this.onMouseoverMarker}
+            title={item.name}
+            name={item.name}
+            venueName={item.name}
+            position={{lat: item.location.lat, lng: item.location.lng}} 
+            icon={{
+              url: `${item.categories[0].icon.prefix}bg_32${item.categories[0].icon.suffix}`,
+              anchor: new google.maps.Point(32,32),
+              scaledSize: new google.maps.Size(32,32)
+            }} 
           />
         )}
         {
@@ -55,7 +90,7 @@ export class MapContainer extends Component {
             visible={showInfoWindow}
           >
             <div className='InfoWindow'>
-              <p>{selectedPlace.venueName}</p>
+              <a href="#">{selectedPlace.venueName}</a>
             </div>
           </InfoWindow>
         }
