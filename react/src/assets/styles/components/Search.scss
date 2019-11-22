@@ -1,0 +1,37 @@
+.home-search {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 260px;
+    background-color: #6d8adf;
+    .login__logo{
+      width: 90%;
+      max-width: 400px;
+    }
+}
+
+.home-search .isHome{
+  width: 70%;
+}
+
+
+.input {
+    background-color: #fff;
+    border: 2px solid white;
+    border-radius: 5px;
+    color: #000;
+    font-family: 'Muli', sans-serif;
+    font-size: 16px;
+    height: 45px;
+    margin-bottom: 20px;
+    outline: none;
+    padding: 0px 20px;
+    &::placeholder{
+      color: #9da3a5;
+    }
+  }
+  
+  ::placeholder {
+    color: white;
+  }

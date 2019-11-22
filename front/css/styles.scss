@@ -15,81 +15,59 @@ body{
     min-height: 100vh;
 }
 
-// HEADER
-.header {
-    height: 60px;
-    padding: 0 20px;
-    display: flex;
-    align-items: center;
-    background-color: #8743fe;
-    .logo{
-        img{
-            display: block;
-            width: 120px;
-        }
-    }
-    .search{
+// // HEADER
+// .header {
+//     height: 60px;
+//     padding: 0 20px;
+//     display: flex;
+//     align-items: center;
+//     background-color: #8743fe;
+//     .logo{
+//         img{
+//             display: block;
+//             width: 120px;
+//         }
+//     }
+//     .search{
 
-    }
-}
+//     }
+// }
 
 // MAIN
 main{
     min-height: calc(100vh - 60px);
 }
-.container{
-    min-height: calc(100vh - 60px);
-    padding: 0 20px;
-}
 
-.btn-primary{
-    background-color: #FFBA00;
-    //background-color: #FAFBFC;
-    background-color: #321461;
-    color: #fff;
-    height: 40px;
-    width: 100%;
-    border: none;
-    border-radius: 4px;
-    border: solid 2px #321461;
-    cursor: pointer;
-    transition: linear 0.2s;
-    &:hover{
-        transition: linear 0.2s;
-        background-color: transparent;
-        color: #321461;
-    }
-}
 
-.form{
-    width: 100%;
-    max-width: 400px;
-    margin: 0 auto;
-    &__logo{
-        width: 80%;
-        display: block;
-        margin: 0 auto;
-    }
-    &__input{
-        display: block;
-        background-color: #fff;
-        border: none;
-        height: 40px;
-        border-radius: 4px;
-        margin: 15px 0;
-        width: 100%;
-        padding: 0 10px;
-    }
+// .form{
+//     width: 100%;
+//     max-width: 400px;
+//     margin: 0 auto;
+//     &__logo{
+//         width: 80%;
+//         display: block;
+//         margin: 0 auto;
+//     }
+//     &__input{
+//         display: block;
+//         background-color: #fff;
+//         border: none;
+//         height: 40px;
+//         border-radius: 4px;
+//         margin: 15px 0;
+//         width: 100%;
+//         padding: 0 10px;
+//     }
     
-}
+// }
 
-.login{
-    .container{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-}
+// .login{
+//     .container{
+//         display: flex;
+//         justify-content: center;
+//         align-items: center;
+//     }
+// }
 
 
 
@@ -165,23 +143,23 @@ main{
 
 
 
-// FOOTER
-footer{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: flex-start;
-    align-items: center;
-    height: 60px;
-    padding: 0 20px;
-    a{
-        margin: 0 10px;
-        color: #fff;
-        text-decoration: none;
-        &:hover{
-            text-decoration: underline;
-        }
-    }
-}
+// // FOOTER
+// footer{
+//     display: flex;
+//     flex-wrap: wrap;
+//     justify-content: flex-start;
+//     align-items: center;
+//     height: 60px;
+//     padding: 0 20px;
+//     a{
+//         margin: 0 10px;
+//         color: #fff;
+//         text-decoration: none;
+//         &:hover{
+//             text-decoration: underline;
+//         }
+//     }
+// }
 
 .animated{
     animation-duration: 2.5s;
