@@ -1,11 +1,11 @@
 const reducer = (state, action) => {
 
     switch(action.type) {
-        case 'SET_FAVORITE':
-            return {
-                ...state,
-                myList: [...state.myList, action.payload]
-            }
+            case 'SET_FAVORITE':
+                return {
+                    ...state,
+                    myList: [...state.myList, action.payload]
+                }
             case 'DELETE_FAVORITE':
                 return {
                     ...state,
@@ -29,8 +29,14 @@ const reducer = (state, action) => {
             case 'GET_VIDEO_SOURCE':
                 return {
                     ...state,
-                    playing: state.trends.find(item => item.id === Number(action.payload))
-                        || state.originals.find(item => item.id === Number(action.payload))
+                    playing: state.trends.find(item => item.id === action.payload)
+                        || state.originals.find(item => item.id === action.payload)
+                        || []
+                }
+            case 'GET_PLACE_SOURCE':
+                return {
+                    ...state,
+                    placeId: item.id
                         || []
                 }
         default:
