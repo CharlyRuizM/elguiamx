@@ -15,7 +15,7 @@
       <div class="header__input">
         <input class="main_title--inputSearch" type="text" placeholder="Estoy buscando"> 
         <input class="main_title--inputPlace" type="text" placeholder="lugar"> 
-        <button class="button">buscar</button>
+        <button class="button--search">buscar</button>
       </div>
     <div class="header__menu">
       <div class="header__menu--profile">
@@ -30,14 +30,14 @@
 
     </div>   
   </header>
-  <div class="categories">
-    <button class="button--fav">Favoritos</button>
-    <button class="button--trends">Tendencias</button>
-    <button class="button--food">Comida</button>
-    <button class="button--coffe">Café</button>
-    <button class="button--nocturn">Nocturna</button>
-    <button class="button--fun">Diversion</button>
-    <button class="button--shop">Compra</button>
+  <div class="categories__buttons">
+    <button class="button--categories">Favoritos</button>
+    <button class="button--categories">Tendencias</button>
+    <button class="button--categories">Comida</button>
+    <button class="button--categories">Café</button>
+    <button class="button--categories">Nocturna</button>
+    <button class="button--categories">Diversion</button>
+    <button class="button--categories">Compra</button>
 
   </div>
 
@@ -61,14 +61,16 @@
         <img class="img--place" src="https://images.pexels.com/photos/789822/pexels-photo-789822.jpeg?auto=format%2Ccompress&cs=tinysrgb&dpr=2&h=750&w=1260"" alt="">
      </div>
      <div class="container__text">
-        <h1 class="place--title">Lugar</h1>
+        <p class="place--title">Lugar</p>
         <p class="place--category">Categoria</p>
         <p class="place--city">Ciudad</p>
     </div>
     </div>
 
     <div class="place__description">
-    <p>descripcion</p>
+    <div class="descripcion__container">
+        <p class="place__description--text">descripcion</p>
+    </div>
     </div>
 
     <div class="place__map">
@@ -76,7 +78,8 @@
     </div>
 
     <div class="place__comment">
-    <p>comentario</p>
+        <input class="place_comment--inputComment" type="text" placeholder="Deja tu comentario"> 
+        <button>Publicar</button>
     </div>
 
     <div class="place__recomendations">

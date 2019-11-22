@@ -1,0 +1,24 @@
+.categories__buttons{
+    background-color:#2883B1;
+    padding: 0px 10px;
+  }
+    .button--categories{
+    background-color: rgba(255, 255, 255, 0.1);
+    border: none;
+    border-radius: 4px;
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
+   
+    height: 50px;
+    letter-spacing: 1px;
+    margin: 5px;
+    transition: 450ms -webkit-transform;
+      transition: 450ms transform;
+      transition: 450ms transform, 450ms -webkit-transform;
+    }
+    .button--categories:hover{
+        background-color: #0468CC;
+        -webkit-transform: scale(1.5);
+        transform: scale(1.5);
+    }

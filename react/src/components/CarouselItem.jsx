@@ -20,7 +20,26 @@ const CarouselItem = (props) => {
     }
     return (
         <div className="carousel-item">
-            <img className="carousel-item__img" src={cover} alt={title} />
+            
+        
+        <img className="carousel-item__img" src={cover} alt={title}  />
+        <div className="carousel-item__details">
+          <p className="carousel-item__details--category">Category</p>
+          <p className="carousel-item__details--place">{title}</p>
+          <p className="carousel-item__details--city">City</p>          
+          <p className="carousel-item__details--rate">0.0</p>
+          <p className="carousel-item__details--reviews">Reviews</p>
+          <img className="carousel-item__details--img" 
+                            src={plusIcon} 
+                            alt="Plus Icon" 
+                            onClick={handleSetFavorite}
+                        /> 
+        </div>
+         
+            
+            
+            
+            {/* <img className="carousel-item__img" src={cover} alt={title} />
             <div className="carousel-item__details">
                 <div>
                     <Link to={`/player/${id}`}>
@@ -48,7 +67,7 @@ const CarouselItem = (props) => {
                 <p className="carousel-item__details--subtitle">
                     {`${year} ${contentRaiting} ${duration}`}
                 </p>
-            </div>
+            </div> */}
         </div>
     );
 };
