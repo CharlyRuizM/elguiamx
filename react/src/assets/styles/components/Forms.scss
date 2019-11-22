@@ -1,0 +1,17 @@
+.form{
+  width: 100%;
+  input{
+    display: block;
+    background-color: #fff;
+    color: #000;
+    border: none;
+    height: 40px;
+    border-radius: 4px;
+    margin: 15px 0;
+    width: 100%;
+    padding: 0 10px;
+    &::placeholder{
+      color: #000;
+    }
+  } 
+}
