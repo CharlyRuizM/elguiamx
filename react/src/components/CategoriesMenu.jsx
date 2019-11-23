@@ -1,4 +1,6 @@
 import React from 'react';
+import { connect } from 'react-redux';
+import { Link } from 'react-router-dom';
 import '../assets/styles/components/CategoriesMenu.scss';
 import DesayunoImg from '../assets/static/places/desayuno_image.jpg';
 import ComidaImg from '../assets/static/places/comida_image.jpg';
@@ -26,14 +28,15 @@ const CategoriesMenu = () => {
                             <img className="img__item--icon" src={DesayunoIcon} alt=""/>
                         </div>   
                    </div>     
-
+                    <Link to to="/explore">
                     <div className="places__item">
                       <img className="img__item--img"  src={ComidaImg} alt="Comida"/> 
                         <div className="places-item__background2">
                             <p className="places-item__details-title">Almuerzo</p>
                             <img className="img__item--icon" src={ComidaIcon} alt=""/>
                         </div>                     
-                    </div>   
+                    </div> 
+                    </Link>  
                     
                     <div className="places__item">
                       <img className="img__item--img"  src={CenaImg} alt="Cena"/> 
