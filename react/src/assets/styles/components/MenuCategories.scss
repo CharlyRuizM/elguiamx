@@ -1,5 +1,7 @@
 .categories__buttons{
     background-color:#2883B1;
+    display: flex;
+    justify-content: center;
     padding: 0px 10px;
   }
     .button--categories{
@@ -18,7 +20,7 @@
       transition: 450ms transform, 450ms -webkit-transform;
     }
     .button--categories:hover{
-        background-color: #0468CC;
+        background-color: #171470;
         -webkit-transform: scale(1.5);
         transform: scale(1.5);
     }

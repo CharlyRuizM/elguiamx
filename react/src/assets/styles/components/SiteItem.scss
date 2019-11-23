@@ -26,9 +26,9 @@
     overflow: scroll;
     grid-area: images;
     background-color: white;
-    border: 1px solid #FFFFFF;
+    box-shadow: 0px 0px 33px -14px rgba(0,0,0,0.75);
     border-radius: 10px;
-    /* overflow: hidden; */
+    
     position: relative;
     display: inline-block;
     width: 100%;
@@ -53,7 +53,6 @@
 
   .place__description{
     background-color: white;
-    border: 1px solid #FFFFFF;
     grid-area: description;
     border-radius: 10px;
     margin: 5px 5px 5px 10px;
@@ -61,9 +60,8 @@
   }
   .place__item{
     background-color: white;
-    border: 1px solid #FFFFFF;
-    border-radius: 10px;
     margin: 5px 5px 5px 10px;
+    border-radius: 10px;
       grid-area: place;
       display: flex;
       
@@ -72,7 +70,6 @@
 
   .place__map{
     background-color: white;
-    border: 1px solid #FFFFFF;
     border-radius: 10px;
     grid-area: map;
     margin: 5px 10px 5px 5px;
@@ -87,15 +84,13 @@
   }
   .place__comment{
     grid-area: comment;
-    background-color: white;
-    border: 1px solid #FFFFFF;
     border-radius: 10px;
+    background-color: white;
     margin: 5px 5px 5px 10px;
     /* background-color: violet; */
   }
   .place__recomendations{
     background-color: white;
-    border: 1px solid #FFFFFF;
     border-radius: 10px;
     grid-area: recomendations;
     margin: 5px 10px 5px 5px;
@@ -103,7 +98,6 @@
   }
   .place__opinions{
     background-color: white;
-    border: 1px solid #FFFFFF;
     border-radius: 10px;
     grid-area: opinions;
     margin: 5px 5px 5px 10px;
