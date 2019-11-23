@@ -9,6 +9,7 @@ import CarouselItem from '../components/CarouselItem';
 import logo from '../assets/static/logo.png';
 import googleIcon from '../assets/static/google-icon.png';
 import placeImg from '../assets/static/thumb.jpg';
+import MenuCategories from '../components/MenuCategories';
 
 import '../assets/styles/components/Explore.scss';
 
@@ -51,6 +52,7 @@ const Explore = ({ places }) => {
   const venues = useInitialState(API);
   
   return venues.length === 0 ? <h1>Loading...</h1> : (
+  
     <div className="explore">
       <div className="recomendations">
         <ul className="recomendations-list">
